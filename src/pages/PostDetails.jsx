@@ -45,7 +45,7 @@ function PostDetails() {
         setLoader(true)
         try {
             const res = await axios.get(URL + '/api/posts/' + postId)
-            // console.log(res.data)
+            console.log(res.data)
             // console.log(user)
             setPost(res.data);
             setUserName(res.data.username);

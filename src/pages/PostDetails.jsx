@@ -144,7 +144,11 @@ function PostDetails() {
                             <p>{new Date(post.updatedAt).toString().slice(16, 24)}</p>
                         </div>
                     </div>
-                    <img src={IF + post.photo} className="w-full mx-auto mt-8" alt="image" />
+                    {/* <img src={IF + post.photo} className="w-full mx-auto mt-8" alt="image" /> */}
+                    {post.photo && (
+                            <img src={IF + post.photo} className="w-full mx-auto mt-8" alt="image" />
+                        )}
+
                     <p className='mx-auto mt-8 dark:text-white'>{post.desc}</p>
     
                     <div className="flex items-center mt-8 space-x-4 font-semibold">
